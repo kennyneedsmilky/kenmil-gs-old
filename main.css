@@ -1,0 +1,165 @@
+/* ケンミル */ /* 神様最高 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    user-select: none;          /* Likely future */      
+    -webkit-user-select: none;  /* Chrome all / Safari all */-moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+}
+/* ボディー */
+body {
+    background-color: rgb(32, 32, 32);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* ゲームタイトル*/
+.game-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* キャンバス */
+.canvas1-cont {
+    position: relative;
+    background-color: rgb(32, 32, 32);
+    width: 100vw;
+    height: 50vh;
+}
+
+.canvas1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+}
+
+/* 矢印のボタン */
+.arrow-btn-cont {
+    position: fixed;
+    bottom: 4rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+    width: 9rem;
+    height: 9rem;
+}
+
+.arrow-btn-sub-cont {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.arrow-btn-item {
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.arrow-btn {
+    flex: 1;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.arrow-btn:hover, .bA-btn:hover, .select-btn:hover, .start-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/*B＆Aのボタン */
+.bA-btn-cont {
+    position: fixed;
+    bottom: 5.5rem;
+    right: 1rem;
+}
+
+.bA-btn {
+    flex: 1;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.a-btn {
+    transform: translateY(-2rem);
+}
+
+/* セレクト＆スタートのボタン */
+.ss-btn-cont {
+    position: fixed;
+    display: flex;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+.select-btn, .start-btn {
+    flex: 1;
+    padding: 2px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0.25rem;
+    color: rgba(255, 255, 255, 0.5);
+    width: 4rem;
+}
+
+/* このクラスを使用すれば、物事を非表示にします。 */
+.hidden {
+    display: none;
+}
+
+/* 横向きと縦向き */
+@media screen and (orientation:landscape) {
+    /* ゲームタイトル*/
+    .game-title {
+        display: none;
+    }
+
+    /* ゲームタイトル*/
+    .game-title {
+        height: 15vh;
+    }
+    
+    /* キャンバス */
+    .canvas1-cont {
+        position: relative;
+        height: 100vh;
+    }
+
+    /* 矢印のボタン */
+    .arrow-btn-cont {
+        bottom: 1rem;
+        left: 0.5rem;
+    }
+
+    /*B＆Aのボタン */
+    .bA-btn-cont {
+        bottom: 2.5rem;
+        right: 0.5rem;
+    }
+
+    /* セレクト＆スタートのボタン */
+    .ss-btn-cont {
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+    }
+}
